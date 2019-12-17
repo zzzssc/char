@@ -1,0 +1,286 @@
+int lpin = 13;
+int i;
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(lpin,OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+//  A的摩斯密码
+ for(i=0;i<2;i++)
+ {
+  if(i==0)
+  {
+    shorttime();
+  }
+  else
+  {
+    longtime();
+  }
+ }
+// B的摩斯密码
+  for(i=0;i<4;i++)
+  {
+    if(i==0)
+    {
+      longtime();
+    }
+    else
+    {
+      shorttime();
+    }
+  }
+//  C的摩斯密码
+  for(i=0;i<4;i++)
+  {
+    if(i==0||i==2)
+    {
+      longtime();
+    }
+    else
+    {
+      shorttime();
+    }
+  }
+//  D的摩斯密码
+  for(i=0;i<3;i++)
+  {
+    if(i==0)
+    {
+      longtime();
+    }
+    else
+    {
+      shorttime();
+    }
+  }
+ //  E的摩斯密码
+  for(i=0;i<1;i++)
+  {
+    shorttime();
+  }
+//  F的摩斯密码
+  for(i=0;i<4;i++)
+  {
+    if(i==3)
+    {
+      longtime();
+    }
+    else
+    {
+      shorttime();
+    }
+  }
+//  G的摩斯密码
+  for(i=0;i<3;i++)
+  {
+    if(i==2)
+    {
+      shorttime();
+    }
+    else
+    {
+      longtime();
+    }
+  }
+//  H的摩斯密码
+  for(i=0;i<4;i++)
+  {
+  shorttime();
+  }
+//I的摩斯密码
+for(i=0;i<2;i++)
+{
+  shorttime();
+}
+//J的摩斯密码
+for(i=0;i<4;i++)
+{
+  if(i==0)
+  {
+    shorttime();
+  }
+  else 
+  {
+    longtime();
+  }
+ }
+// k的摩斯密码
+for(i=0;i<3;i++)
+{
+  if(i==1)
+  {
+    shorttime();
+  }
+  else
+  {
+    longtime();
+  }
+}
+//  L的摩斯密码
+  for(i=0;i<4;i++)
+  {
+    if(i==2)
+    {
+      longtime();
+    }
+    else
+    {
+      shorttime();
+    }
+  }
+//  m的摩斯密码
+for(i=0;i<2;i++)
+{
+  longtime();
+}
+//n的摩斯密码
+ for(i=0;i<2;i++)
+ {
+  if(i==0)
+  {
+    longtime();
+  }
+  else{
+    shorttime();
+  }
+ }
+//  O的摩斯密码
+  for(i=0;i<3;i++)
+  {
+    longtime();
+  }
+//  P的摩斯密码
+for(i=0;i<4;i++)
+{
+  if(i==0||i==3)
+  {
+    shorttime();
+  }
+  else
+  {
+    longtime();
+  }
+}
+//Q的摩斯密码
+for(i=0;i<4;i++)
+{
+  if(i==3)
+  {
+    shorttime();
+  }
+  else
+  {
+    longtime();
+  }
+}
+//R的摩斯密码
+for(i=0;i<3;i++)
+{
+  if(i==1)
+  {
+    longtime();
+  }
+  else
+  {
+    shorttime();
+  }
+}
+//S的摩斯密码
+for(i=0;i<3;i++)
+{
+  shorttime();
+}
+//T的摩斯密码
+for(i=0;i<1;i++)
+{
+  longtime();
+}
+//U的摩斯密码
+for(i=0;i<3;i++)
+{
+  if(i==2)
+  {
+    longtime();
+  }
+  else
+  {
+    shorttime();
+  }
+}
+//V的摩斯密码
+for(i=0;i<4;i++)
+{
+  if(i==3)
+  {
+    longtime();
+  }
+  else
+  {
+    shorttime();
+  }
+}
+//W的摩斯密码
+for(i=0;i<3;i++)
+{
+  if(i==0)
+  {
+    shorttime();
+  }
+  else
+  {
+    longtime();
+  }
+}
+//X的摩斯密码
+for(i=0;i<4;i++)
+{
+  if(i==1||i==2)
+  {
+    shorttime();
+  }
+  else
+  {
+    longtime();
+  }
+}
+//Y的摩斯密码
+for(i=0;i<4;i++)
+{
+  if(i==1)
+  {
+    shorttime();
+  }
+  else
+  {
+    longtime();
+  }
+}
+//Z的摩斯密码
+for(i=0;i<3;i++)
+{
+  if(i==2)
+  {
+    shorttime();
+  }
+  else
+  {
+    longtime();
+  }
+}
+}
+void longtime()
+ {
+   digitalWrite(lpin,HIGH);
+   delay(1000);
+   digitalWrite(lpin,LOW);
+   delay(900);
+ }
+void shorttime()
+ {
+  digitalWrite(lpin,HIGH);
+  delay(500);
+  digitalWrite(lpin,LOW);
+  delay(200);
+ }
